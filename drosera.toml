@@ -1,0 +1,19 @@
+ethereum_rpc = "https://rpc.hoodi.ethpandaops.io/"
+drosera_rpc = "https://relay.hoodi.drosera.io"
+eth_chain_id = 560048
+drosera_address = "0x91cB447BaFc6e0EA0F4Fe056F5a9b1F14bb06e5D"
+
+[traps.mint_guard_v3]
+path = "out/MintGuardTrap.sol/MintGuardTrap.json"
+response_contract = "0xd3663A39b3c65D0f1e538c72EB0ca2952EfeE856"
+response_function = "respond(uint256)"
+cooldown_period_blocks = 33
+min_number_of_operators = 1
+max_number_of_operators = 3
+block_sample_size = 1
+private_trap = false
+address = "0xb128599Bb35A6CF8B4B19Fd4Ca89aD92B68DD9fe"
+
+[[traps.mint_guard_v3.collect_config]]
+to = "0x04aB212043c1DB35389Ce16821bc947E608154AC"
+data = "0x18160ddd"
