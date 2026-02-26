@@ -1,0 +1,49 @@
+{
+  "transactions": [
+    {
+      "hash": "0x49b4c77cbd1e8e91e6c8eb203766398ff33956f134a782b184f639da39997326",
+      "transactionType": "CALL",
+      "contractName": null,
+      "contractAddress": "0x04ab212043c1db35389ce16821bc947e608154ac",
+      "function": "maliciousMint(uint256)",
+      "arguments": [
+        "2000000000000000000000"
+      ],
+      "transaction": {
+        "from": "0x8995b7abd8924fe2089e7a184ccfaad94c576a2f",
+        "to": "0x04ab212043c1db35389ce16821bc947e608154ac",
+        "gas": "0x1666b",
+        "value": "0x0",
+        "input": "0x7123334500000000000000000000000000000000000000000000006c6b935b8bbd400000",
+        "nonce": "0x3",
+        "chainId": "0x88bb0"
+      },
+      "additionalContracts": [],
+      "isFixedGasLimit": false
+    }
+  ],
+  "receipts": [
+    {
+      "status": "0x1",
+      "cumulativeGasUsed": "0x252e4ba",
+      "logs": [],
+      "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "type": "0x2",
+      "transactionHash": "0x49b4c77cbd1e8e91e6c8eb203766398ff33956f134a782b184f639da39997326",
+      "transactionIndex": "0x12",
+      "blockHash": "0x465aeac5088de917d9cdc6b53484d497bf680828eb5a2d5a57822773aac02505",
+      "blockNumber": "0x233cca",
+      "gasUsed": "0x1037e",
+      "effectiveGasPrice": "0x3997ee42",
+      "from": "0x8995b7abd8924fe2089e7a184ccfaad94c576a2f",
+      "to": "0x04ab212043c1db35389ce16821bc947e608154ac",
+      "contractAddress": null
+    }
+  ],
+  "libraries": [],
+  "pending": [],
+  "returns": {},
+  "timestamp": 1772080481334,
+  "chain": 560048,
+  "commit": "ad94125"
+}
