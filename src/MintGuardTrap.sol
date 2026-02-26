@@ -3,25 +3,29 @@ pragma solidity ^0.8.20;
 
 import {ITrap} from "drosera-contracts/interfaces/ITrap.sol";
 
+// Minimal interface to fetch total supply
+interface ILRT {
+    function totalSupply() external view returns (uint256);
+}
+
 contract MintGuardTrap is ITrap {
-    // Check: No storage variables present
+    // Hardcoding the target to ensure "No Storage" and "Self-Sufficient Collection"
+    address public constant TARGET_LRT = 0x04aB212043c1DB35389Ce16821bc947E608154AC;
 
     function collect() external view override returns (bytes memory) {
-        // We will pass the MockLRT address via the planner, 
-        // but for this example, we'll assume it's decoded from data if needed.
-        // For simplicity in this logic, we monitor one target.
-        return abi.encode(); 
+        // ACTUALLY collecting the signal here
+        uint256 supply = ILRT(TARGET_LRT).totalSupply();
+        return abi.encode(supply);
     }
 
     function shouldRespond(bytes[] calldata data) external pure override returns (bool, bytes memory) {
-        // RULE 3: DATA LENGTH GUARD
+        // Data length guard
         if (data.length == 0 || data[0].length == 0) return (false, bytes(""));
 
-        // data[0] contains the abi.encoded total supply we collected
+        // Decode the signal we collected in the function above
         uint256 currentSupply = abi.decode(data[0], (uint256));
         
-        // In a real scenario, we'd compare data[0] vs data[1].
-        // For this 1-vector threshold simulation: trigger if supply > 1000 ether
+        // Trigger if supply > 1000 ETH (assuming 18 decimals)
         if (currentSupply > 1000 ether) {
             return (true, abi.encode(currentSupply));
         }
