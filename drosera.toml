@@ -3,7 +3,7 @@ drosera_rpc = "https://relay.hoodi.drosera.io"
 eth_chain_id = 560048
 drosera_address = "0x91cB447BaFc6e0EA0F4Fe056F5a9b1F14bb06e5D"
 
-[traps.mint_guard_v4]
+[traps.mint_guard_v5]
 path = "out/MintGuardTrap.sol/MintGuardTrap.json"
 response_contract = "0x138C24E88cba835ddC926C4F466bBBa33Af9086f"
 # This matches the Drosera Executor authorized in your Response contract
