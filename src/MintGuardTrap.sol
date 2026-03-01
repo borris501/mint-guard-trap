@@ -10,7 +10,7 @@ interface ILRT {
 
 contract MintGuardTrap is ITrap {
     // Hardcoding the target to ensure "No Storage" and "Self-Sufficient Collection"
-    address public constant TARGET_LRT = 0x04aB212043c1DB35389Ce16821bc947E608154AC;
+    address public constant TARGET_LRT = 0x7562dE036ae83CFa24Ee0aFC944f7E4ecFBcB94B;
 
     function collect() external view override returns (bytes memory) {
         // ACTUALLY collecting the signal here
